@@ -1,0 +1,27 @@
+{
+  "name": "philippgrashoff/atkuifields",
+  "minimum-stability": "dev",
+  "description": "",
+  "prefer-stable": true,
+  "config": {
+    "platform": {
+      "php": "7.4"
+    }
+  },
+  "require": {
+    "atk4/ui": "2.4.*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": ">8"
+  },
+  "autoload": {
+    "psr-4": {
+      "atkuifields\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "atkuifields\\tests\\": "tests"
+    }
+  }
+}

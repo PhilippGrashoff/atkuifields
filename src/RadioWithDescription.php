@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace atkuifields;
 
+use Atk4\Data\Model;
 use atk4\data\Persistence\Static_;
-use atk4\ui\Form;
+use Atk4\Ui\Form;
 
-
-class RadioWithDescription extends Control\Input
+class RadioWithDescription extends Form\Control\Input
 {
     public $defaultTemplate = 'radio_with_description.html';
     public $descriptionField;
@@ -20,7 +20,7 @@ class RadioWithDescription extends Control\Input
     protected function init(): void
     {
         parent::init();
-        $this->_tRow = $this->template->clone('Row');
+        $this->_tRow = $this->template->cloneRegion('Row');
         $this->template->del('Row');
         $this->_tRow->set('_name', $this->short_name);
     }
